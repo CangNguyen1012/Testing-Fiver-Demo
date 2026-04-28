@@ -39,7 +39,7 @@ export class LoginPage {
         await this.page.goto(this.url)
     }
 
-    async filEmail(email: string) {
+    async fillEmail(email: string) {
         await this.emailInput.fill(email)
     }
 
@@ -60,7 +60,7 @@ export class LoginPage {
     }
 
     async login(email: string, password: string) {
-        await this.filEmail(email)
+        await this.fillEmail(email)
         await this.fillPassword(password)
         await this.clickLogin()
     }

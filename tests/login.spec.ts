@@ -22,6 +22,110 @@ test.describe("Login Page Tests", () => {
         expect(loginPage.isLoginFailed())
     })
 
+    test("Login Failed with Incorrect Email", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("wrongemail@gmail.com", "cang@1012")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Both Email and Password Incorrect", async ({
+        page,
+    }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("wrongemail@gmail.com", "wrongpassword")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Invalid Email Format", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("invalidemailformat", "cang@1012")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Short Password", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("testuser123@gmail.com", "123")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Long Password", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login(
+            "testuser123@gmail.com",
+            "thisIsAVeryLongPasswordThatExceedsTheMaximumAllowedLength"
+        )
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Email Containing Spaces", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("testuser123 @gmail.com", "cang@1012")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login failed with unregistered email", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.login("unregistered@gmail.com", "cang@1012")
+
+        // ✅ Wait for error message (auto-wait, no timeout needed)
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Empty Fields", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.clickLogin()
+
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Empty Email", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.fillPassword("cang@1012")
+        await loginPage.clickLogin()
+
+        expect(loginPage.isLoginFailed())
+    })
+
+    test("Login Failed with Empty Password", async ({ page }) => {
+        const loginPage = new LoginPage(page)
+
+        await loginPage.goto()
+        await loginPage.fillEmail("testuser123@gmail.com")
+        await loginPage.clickLogin()
+
+        expect(loginPage.isLoginFailed())
+    })
+
     test("Password toggle button should work correctly", async ({ page }) => {
         const loginPage = new LoginPage(page)
 
