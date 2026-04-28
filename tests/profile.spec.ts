@@ -66,10 +66,9 @@ test.describe("Profile Page tests", () => {
         await profilePage.clickSave()
 
         // Verify the certification is added
-        const certifications = await page
-            .locator('.inner_item:has(h3:has-text("Certification")) p.lorem')
-            .allTextContents()
-        expect(certifications).toContain("ISTQB")
+        await expect(
+            page.locator('.inner_item:has(h3:has-text("Certification")) p.lorem').filter({ hasText: new RegExp("^ISTQB$") })
+        ).toBeVisible()
     })
 
     test("Verify many certifications added successfully", async ({ page }) => {
@@ -82,12 +81,10 @@ test.describe("Profile Page tests", () => {
         await profilePage.clickSave()
 
         // Verify the certifications are added
-        const certifications = await page
-            .locator('.inner_item:has(h3:has-text("Certification")) p.lorem')
-            .allTextContents()
-        expect(certifications).toContain("Testing")
-        expect(certifications).toContain("PMP")
-        expect(certifications).toContain("AWS Certified Solutions Architect")
+        const certLocator = page.locator('.inner_item:has(h3:has-text("Certification")) p.lorem')
+        await expect(certLocator.filter({ hasText: new RegExp("^Testing$") })).toBeVisible()
+        await expect(certLocator.filter({ hasText: new RegExp("^PMP$") })).toBeVisible()
+        await expect(certLocator.filter({ hasText: new RegExp("^AWS Certified Solutions Architect$") })).toBeVisible()
     })
 
     test("Verify one skill added successfully", async ({ page }) => {
@@ -98,10 +95,9 @@ test.describe("Profile Page tests", () => {
         await profilePage.clickSave()
 
         // Verify the skill is added
-        const skills = await page
-            .locator('.inner_item:has(h3:has-text("Skills")) p.lorem')
-            .allTextContents()
-        expect(skills).toContain("Automation")
+        await expect(
+            page.locator('.inner_item:has(h3:has-text("Skills")) p.lorem').filter({ hasText: new RegExp("^Automation$") })
+        ).toBeVisible()
     })
 
     test("Verify many skills added successfully", async ({ page }) => {
@@ -114,12 +110,10 @@ test.describe("Profile Page tests", () => {
         await profilePage.clickSave()
 
         // Verify the skills are added
-        const skills = await page
-            .locator('.inner_item:has(h3:has-text("Skills")) p.lorem')
-            .allTextContents()
-        expect(skills).toContain("Manual Testing")
-        expect(skills).toContain("Performance Testing")
-        expect(skills).toContain("Security Testing")
+        const skillLocator = page.locator('.inner_item:has(h3:has-text("Skills")) p.lorem')
+        await expect(skillLocator.filter({ hasText: new RegExp("^Manual Testing$") })).toBeVisible()
+        await expect(skillLocator.filter({ hasText: new RegExp("^Performance Testing$") })).toBeVisible()
+        await expect(skillLocator.filter({ hasText: new RegExp("^Security Testing$") })).toBeVisible()
     })
 
     test("Verify Facebook link works", async ({ page }) => {
@@ -302,12 +296,9 @@ test.describe("Profile Page tests", () => {
 
         await profilePage.clickSave()
 
-        const certifications = await page
-            .locator(".d-flex.flex-row.flex-wrap p.lorem")
-            .allTextContents()
-
-        const count = certifications.filter((c) => c === "I").length
-        expect(count).toBe(1)
+        await expect(
+            page.locator(".d-flex.flex-row.flex-wrap p.lorem").filter({ hasText: new RegExp("^I$") })
+        ).toHaveCount(1)
     })
 
     test("Verify empty certification cannot be added", async ({ page }) => {
@@ -331,12 +322,9 @@ test.describe("Profile Page tests", () => {
 
         await profilePage.clickSave()
 
-        const skills = await page
-            .locator(".d-flex.flex-row.flex-wrap p.lorem")
-            .allTextContents()
-
-        const count = skills.filter((s) => s === "A").length
-        expect(count).toBe(1)
+        await expect(
+            page.locator(".d-flex.flex-row.flex-wrap p.lorem").filter({ hasText: new RegExp("^A$") })
+        ).toHaveCount(1)
     })
 
     test("Verify very long skill name handling", async ({ page }) => {

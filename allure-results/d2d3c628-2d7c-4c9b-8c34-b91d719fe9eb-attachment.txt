@@ -1,0 +1,2 @@
+Chips before clear: 1
+Chips after individual delete: 0

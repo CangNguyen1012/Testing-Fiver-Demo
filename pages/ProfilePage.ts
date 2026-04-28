@@ -275,15 +275,15 @@ export class ProfilePage {
     }
 
     async addCertification(cert: string) {
-        await this.certificationInput.fill(cert)
+        await this.certificationInput.focus()
+        await this.certificationInput.clear()
+        await this.certificationInput.pressSequentially(cert, { delay: 50 })
         await highLightAndScreenshot(
             this.page,
             this.certificationInput,
             "Profile Page tests",
             "add_certification",
         )
-        await this.certificationInput.focus()
-        await this.certificationInput.pressSequentially(cert, { delay: 50 })
         await this.page.waitForTimeout(500)
         await this.page.keyboard.press("Enter")
         await expect(
@@ -292,15 +292,15 @@ export class ProfilePage {
     }
 
     async addSkill(skill: string) {
-        await this.skillInput.fill(skill)
+        await this.skillInput.focus()
+        await this.skillInput.clear()
+        await this.skillInput.pressSequentially(skill, { delay: 50 })
         await highLightAndScreenshot(
             this.page,
             this.skillInput,
             "Profile Page tests",
             "add_skill",
         )
-        await this.skillInput.focus()
-        await this.skillInput.pressSequentially(skill, { delay: 50 })
         await this.page.waitForTimeout(500)
         await this.page.keyboard.press("Enter")
         await expect(this.skillChips.filter({ hasText: new RegExp(`^${skill}$`) }).first()).toBeVisible()
@@ -341,31 +341,36 @@ export class ProfilePage {
     }
 
     async clearCertification() {
-        for (let i = 0; i < 5; i++) {
-            if (!(await this.certificationClearButton.isVisible())) break
-
-            await highLightAndScreenshot(
-                this.page,
-                this.certificationClearButton,
-                "Profile Page tests",
-                "clear_certification",
-            )
-
-            await this.certificationClearButton.click()
+        await this.certificationInput.clear()
+        const count = await this.certificationChips.count()
+        for (let i = count - 1; i >= 0; i--) {
+            const deleteIcon = this.certificationChips.nth(i).locator('[data-testid="CancelIcon"]')
+            if (await deleteIcon.isVisible()) {
+                await highLightAndScreenshot(
+                    this.page,
+                    deleteIcon,
+                    "Profile Page tests",
+                    "clear_certification",
+                )
+                await deleteIcon.click()
+            }
         }
     }
 
     async clearSkill() {
-        for (let i = 0; i < 5; i++) {
-            if (!(await this.skillClearButton.isVisible())) break
-
-            await highLightAndScreenshot(
-                this.page,
-                this.skillClearButton,
-                "Profile Page tests",
-                "clear_skill",
-            )
-            await this.skillClearButton.click()
+        await this.skillInput.clear()
+        const count = await this.skillChips.count()
+        for (let i = count - 1; i >= 0; i--) {
+            const deleteIcon = this.skillChips.nth(i).locator('[data-testid="CancelIcon"]')
+            if (await deleteIcon.isVisible()) {
+                await highLightAndScreenshot(
+                    this.page,
+                    deleteIcon,
+                    "Profile Page tests",
+                    "clear_skill",
+                )
+                await deleteIcon.click()
+            }
         }
     }
 

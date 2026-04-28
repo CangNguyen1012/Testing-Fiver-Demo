@@ -1,0 +1,328 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img [ref=e10]
+        - generic [ref=e12]:
+          - searchbox "Find Services" [ref=e15]
+          - button "Search" [ref=e16] [cursor=pointer]
+      - navigation [ref=e18]:
+        - list [ref=e19]:
+          - listitem [ref=e20] [cursor=pointer]: Business
+          - listitem [ref=e21] [cursor=pointer]: Explore
+          - listitem [ref=e22] [cursor=pointer]:
+            - img [ref=e23]: 
+            - text: English
+          - listitem [ref=e25] [cursor=pointer]: US$ USD
+          - listitem [ref=e26] [cursor=pointer]: Become a Seller
+          - listitem [ref=e27] [cursor=pointer]:
+            - link [ref=e28]:
+              - /url: /profile
+              - figure [ref=e29]:
+                - img "avatar" [ref=e30]
+  - navigation [ref=e33]:
+    - generic [ref=e34]:
+      - link "Graphics & Design" [ref=e36] [cursor=pointer]:
+        - /url: /title/1
+        - paragraph [ref=e37]: Graphics & Design
+      - link "Digital Marketing" [ref=e39] [cursor=pointer]:
+        - /url: /title/2
+        - paragraph [ref=e40]: Digital Marketing
+      - link "Writing & Translation" [ref=e42] [cursor=pointer]:
+        - /url: /title/3
+        - paragraph [ref=e43]: Writing & Translation
+      - link "Video & Animation" [ref=e45] [cursor=pointer]:
+        - /url: /title/4
+        - paragraph [ref=e46]: Video & Animation
+      - link "Music & Audio" [ref=e48] [cursor=pointer]:
+        - /url: /title/5
+        - paragraph [ref=e49]: Music & Audio
+      - link "Content Creator" [ref=e51] [cursor=pointer]:
+        - /url: /title/5631
+        - paragraph [ref=e52]: Content Creator
+      - link "CI/CD" [ref=e54] [cursor=pointer]:
+        - /url: /title/5633
+        - paragraph [ref=e55]: CI/CD
+      - link "Design & Marketing" [ref=e57] [cursor=pointer]:
+        - /url: /title/6634
+        - paragraph [ref=e58]: Design & Marketing
+  - generic [ref=e61]:
+    - generic [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]: ·
+            - text: Online
+          - button [ref=e68] [cursor=pointer]
+        - generic [ref=e69]:
+          - generic [ref=e71] [cursor=pointer]:
+            - generic [ref=e74]: 
+            - img "avatar" [ref=e76]
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: testuser123@gmail.com
+            - button [ref=e80] [cursor=pointer]:
+              - img [ref=e81]: 
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: 
+              - text: From
+            - generic [ref=e87]: Vietnam
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - img [ref=e90]: 
+              - text: Member since
+            - generic [ref=e92]: Oct2022
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Description" [level=3] [ref=e97]
+            - button [ref=e98] [cursor=pointer]:
+              - img [ref=e99]: 
+          - generic [ref=e101]:
+            - heading "Name:" [level=6] [ref=e102]
+            - paragraph
+          - generic [ref=e103]:
+            - heading "Phone:" [level=6] [ref=e104]
+            - paragraph [ref=e105]: "1234567890"
+          - generic [ref=e106]:
+            - heading "Birthday:" [level=6] [ref=e107]
+            - paragraph [ref=e108]: invalid-date
+        - generic [ref=e109]:
+          - heading "Languages" [level=3] [ref=e111]
+          - paragraph [ref=e112]: English - Basic
+          - paragraph [ref=e113]: Vietnamese (Tiếng Việt) - Native/Bilingual
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - heading "Skills" [level=3] [ref=e116]
+            - button [ref=e117] [cursor=pointer]:
+              - img [ref=e118]: 
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: A
+            - paragraph [ref=e122]: Manual Testing
+            - paragraph [ref=e123]: Performance Testing
+            - paragraph [ref=e124]: Security Testing
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - heading "Education" [level=3] [ref=e127]
+            - button [ref=e128] [cursor=pointer]:
+              - img [ref=e129]: 
+          - paragraph [ref=e131]: CYBERSOFT
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - heading "Certification" [level=3] [ref=e134]
+            - button [active] [ref=e135] [cursor=pointer]:
+              - img [ref=e136]: 
+          - paragraph [ref=e139]: ISTQB
+        - generic [ref=e140]:
+          - heading "Linked Accounts" [level=3] [ref=e142]
+          - list [ref=e143]:
+            - listitem [ref=e144]:
+              - img [ref=e145]
+              - link "Facebook" [ref=e147] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e148]:
+              - img "google" [ref=e149]:
+                - img [ref=e150]
+              - link "Google" [ref=e152] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e153]:
+              - img [ref=e154]
+              - link "Github" [ref=e156] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e157]:
+              - img [ref=e158]
+              - generic [ref=e160] [cursor=pointer]: Twitter
+            - listitem [ref=e161]:
+              - img "plus" [ref=e162]:
+                - img [ref=e163]
+              - link "Dirbble" [ref=e166] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e167]:
+              - img "plus" [ref=e168]:
+                - img [ref=e169]
+              - link "Stack Overflow" [ref=e172] [cursor=pointer]:
+                - /url: "#"
+    - generic [ref=e175]:
+      - generic [ref=e176]: It seems that you don't have any active Gigs.
+      - button "Create a new Gig" [ref=e177] [cursor=pointer]
+  - contentinfo [ref=e178]:
+    - generic [ref=e180]:
+      - generic [ref=e181]:
+        - article [ref=e183]:
+          - heading "Categories" [level=6] [ref=e185]
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - link "Graphics & Design" [ref=e189] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e190]:
+              - link "Digital Marketing" [ref=e191] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e192]:
+              - link "Writing & Translation" [ref=e193] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e194]:
+              - link "Video & Animation" [ref=e195] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e196]:
+              - link "Music & Audio" [ref=e197] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e198]:
+              - link "Programming & Tech" [ref=e199] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e200]:
+              - link "Data" [ref=e201] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e202]:
+              - link "Business" [ref=e203] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e204]:
+              - link "Lifestyle" [ref=e205] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e206]:
+              - link "Sitemap" [ref=e207] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e209]:
+          - heading "About" [level=6] [ref=e211]
+          - list [ref=e213]:
+            - listitem [ref=e214]:
+              - link "Careers" [ref=e215] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e216]:
+              - link "Press & News" [ref=e217] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e218]:
+              - link "Partnerships" [ref=e219] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e220]:
+              - link "Privacy Policy" [ref=e221] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e222]:
+              - link "Terms of Service" [ref=e223] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e224]:
+              - link "Intellectual Property Claims" [ref=e225] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e226]:
+              - link "Investor Relations" [ref=e227] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e229]:
+          - heading "Support" [level=6] [ref=e231]
+          - list [ref=e233]:
+            - listitem [ref=e234]:
+              - link "Help & Support" [ref=e235] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e236]:
+              - link "Trust & Safety" [ref=e237] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e238]:
+              - link "Selling" [ref=e239] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e240]:
+              - link "Buying" [ref=e241] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e243]:
+          - heading "Communlty" [level=6] [ref=e245]
+          - list [ref=e247]:
+            - listitem [ref=e248]:
+              - link "Events" [ref=e249] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e250]:
+              - link "Blog" [ref=e251] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e252]:
+              - link "Forum" [ref=e253] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e254]:
+              - link "Community Standards" [ref=e255] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e256]:
+              - link "Podcast" [ref=e257] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e258]:
+              - link "Affiliates" [ref=e259] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e260]:
+              - link "Invite a Friend" [ref=e261] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e262]:
+              - link "Become a Seller" [ref=e263] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e265]:
+          - heading "More From" [level=6] [ref=e267]
+          - list [ref=e269]:
+            - listitem [ref=e270]:
+              - link "Business" [ref=e271] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e272]:
+              - link "Pro" [ref=e273] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e274]:
+              - link "Studios" [ref=e275] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e276]:
+              - link "Logo Maker" [ref=e277] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e278]:
+              - link "Guides" [ref=e279] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e280]:
+              - link "Get Inspired" [ref=e281] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e282]:
+              - link "Select" [ref=e283] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e284]:
+              - link "ClearVoice" [ref=e285] [cursor=pointer]:
+                - /url: "#"
+              - paragraph [ref=e286]: Content Marketing
+            - listitem [ref=e287]:
+              - link "Workspace" [ref=e288] [cursor=pointer]:
+                - /url: "#"
+              - paragraph [ref=e289]: Invoice Software
+            - listitem [ref=e290]:
+              - link "Learn" [ref=e291] [cursor=pointer]:
+                - /url: "#"
+              - paragraph [ref=e292]: Online Courses
+            - listitem [ref=e293]:
+              - link "Working Not Working" [ref=e294] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e295]:
+        - generic [ref=e296]:
+          - img [ref=e298]
+          - generic [ref=e303]: © International Ltd. 2022
+        - generic [ref=e304]:
+          - list [ref=e305]:
+            - listitem [ref=e306]:
+              - link [ref=e307] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e309]: 
+            - listitem [ref=e311]:
+              - link [ref=e312] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e314]: 
+            - listitem [ref=e316]:
+              - link [ref=e317] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e319]: 
+            - listitem [ref=e321]:
+              - link [ref=e322] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e324]: 
+            - listitem [ref=e326]:
+              - link [ref=e327] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e329]: 
+          - generic [ref=e331]:
+            - button "English" [ref=e333] [cursor=pointer]:
+              - img [ref=e335]: 
+              - text: English
+            - button "US$ USD" [ref=e338] [cursor=pointer]
+            - button [ref=e339] [cursor=pointer]:
+              - img [ref=e341]: 
+```
