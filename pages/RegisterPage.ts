@@ -29,7 +29,7 @@ export class RegisterPage {
     readonly birthdayErrorMessage: Locator
     readonly termsOfServiceLink: Locator
 
-    readonly url = "https://demo4.cybersoft.edu.vn/register"
+    readonly url = "/register"
 
     constructor(page: Page) {
         this.page = page

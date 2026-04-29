@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test"
+import { Locator, Page, test } from "@playwright/test"
 import { mkdirSync } from "fs"
 import { join } from "path"
 
@@ -56,7 +56,13 @@ export async function highLightAndScreenshot(
             `${sanitizeFileName(stepName)}.png`,
         )
 
-        await page.screenshot({ path: filePath })
+        const buffer = await page.screenshot({ path: filePath })
+
+        // Attach to Playwright test report (Allure compatible)
+        await test.info().attach(stepName, {
+            body: buffer,
+            contentType: "image/png",
+        })
 
         await removeHighlight(locator)
     } catch (error) {

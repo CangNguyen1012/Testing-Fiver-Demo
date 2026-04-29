@@ -9,11 +9,11 @@ test.describe("Profile Page tests", () => {
         await loginPage.goto()
         await loginPage.login("testuser123@gmail.com", "cang@1012")
 
-        await expect(page).toHaveURL("https://demo4.cybersoft.edu.vn/profile")
+        await expect(page).toHaveURL("/profile")
     })
 
     test("Verify profile page loaded ", async ({ page }) => {
-        await expect(page).toHaveURL("https://demo4.cybersoft.edu.vn/profile")
+        await expect(page).toHaveURL("/profile")
     })
 
     test("Update name successfully", async ({ page }) => {
@@ -193,7 +193,7 @@ test.describe("Profile Page tests", () => {
         await profilePage.logout()
 
         // Verify the user is logged out and redirected to the home page
-        await expect(page).toHaveURL("https://demo4.cybersoft.edu.vn/")
+        await expect(page).toHaveURL("/")
     })
 
     test("Verify profile image upload", async ({ page }) => {

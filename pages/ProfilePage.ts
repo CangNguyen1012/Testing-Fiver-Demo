@@ -32,7 +32,7 @@ export class ProfilePage {
     readonly createGigButton: Locator
     readonly successToastMessage: Locator
 
-    readonly url = "https://demo4.cybersoft.edu.vn/profile"
+    readonly url = "/profile"
 
     constructor(page: Page) {
         this.page = page

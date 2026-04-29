@@ -13,7 +13,7 @@ export class LoginPage {
     readonly passwordErrorMessage: Locator
     readonly loginFailedMessage: Locator
 
-    readonly url = "https://demo4.cybersoft.edu.vn/login"
+    readonly url = "/login"
 
     constructor(page: Page) {
         this.page = page

@@ -196,7 +196,7 @@ test.describe("Register Page Tests", () => {
 
         await registerPage.goto()
         await registerPage.termsOfServiceLink.click()
-        expect(page.url()).toBe("https://demo4.cybersoft.edu.vn/terms")
+        await expect(page).toHaveURL("/terms")
     })
 
     test("Verify user can navigate to Login page by clicking on I am already member link", async ({
@@ -206,7 +206,7 @@ test.describe("Register Page Tests", () => {
 
         await registerPage.goto()
         await registerPage.loginLink.click()
-        expect(page.url()).toBe("https://demo4.cybersoft.edu.vn/login")
+        await expect(page).toHaveURL("/login")
     })
 
     test.afterEach(async ({ page }) => {
